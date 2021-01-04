@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寻找意中人</title>
+</head>
+<body>
+       
+<div id="text">
+
+</div>
+</body>
+
+
+
+
+ <script>
+  let divTyping = document.getElementById('text')
+  let i = 0,
+    timer = 0,
+    str = '<h1> <a href="https://qm.qq.com/cgi-bin/qm/qr?k=rgIA-yl10r7HCi9ulDx9fmZelGr1dtjF&noverify=0"> <h1>相遇</h1> </a>  </h1>
+
+function typing () {
+    if (i <= str.length) {
+      divTyping.innerHTML = str.slice(0, i++) + '_'
+      timer = setTimeout(typing, 200)
+    }
+    else {
+      divTyping.innerHTML = str//结束打字,移除 _ 光标
+      clearTimeout(timer)
+    }
+  }
+
+  typing()
+ </script>
+     
+</html>
+
